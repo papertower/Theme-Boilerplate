@@ -1,0 +1,15 @@
+{
+    "name": "papertower/starter-theme",
+    "description": "The starter theme Paper Tower built for creating amazing websites.",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Jason Adams",
+            "email": "jason@papertower.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Theme\\": "src/"}
+    }
+}

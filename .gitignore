@@ -1,0 +1,15 @@
+_Store
+.svn
+.cvs
+*.bak
+*.swp
+*.cfg
+*.config
+Thumbs.db
+.DS_Store
+.sass-cache/
+
+# NPM & Webpack
+node_modules/
+**/library/js/min/*.js.map
+npm-debug.log

@@ -1,0 +1,29 @@
+{
+  "name": "wpe-starter",
+  "version": "1.0.0",
+  "description": "Custom WordPress theme",
+  "dependencies": {
+    "flatpickr": "^3.1.5",
+    "flowtype": "^2.0.0",
+    "handlebars": "^4.0.10",
+    "js-cookie": "^2.1.4",
+    "select2": "^4.0.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "css-loader": "^0.26.4",
+    "laravel-mix": "^1.5.0",
+    "style-loader": "^0.13.2",
+    "webpack": "^3.6.0",
+    "webpack-livereload-plugin": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Paper Tower",
+  "license": "ISC"
+}

@@ -1,0 +1,115 @@
+// breakpoints
+$small: 481px;
+$small-medium: 641px;
+$medium: 768px;
+$medium-large: 876px;
+$large: 1240px;
+$extra-large: 1440px;
+
+@mixin small-up {
+  @media only screen and (min-width: #{$small}) {
+    @content;
+  }
+}
+
+@mixin small-medium-up {
+  @media only screen and (min-width: #{$small-medium}) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media only screen and (min-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin medium-large-up {
+  @media only screen and (min-width: #{$medium-large}) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media only screen and (min-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin extra-large-up {
+  @media only screen and (min-width: #{$extra-large}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+         only screen and (min--moz-device-pixel-ratio: 1.5),
+         only screen and (min-device-pixel-ratio: 1.5) {
+  	@content
+  }
+}
+
+@mixin animate($duration, $delay) {
+	 -moz-animation-duration: $duration;
+	 -webkit-animation-duration: $duration;
+	 animation-duration: $duration;
+	 -webkit-animation-delay: $delay;
+	 -moz-animation-delay: $delay;
+	 animation-delay: $delay;
+	 -moz-animation-iteration-count: 1;
+	 -webkit-animation-iteration-count: 1;
+	 animation-iteration-count: 1;
+}
+
+@mixin radius($round) {
+	-webkit-border-radius: $round;
+	-moz-border-radius: $round;
+	border-radius: $round;
+}
+
+/*********************
+TRANSITION
+*********************/
+
+/*
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+
+@mixin transition($transition...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit-", "" );
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+/*********************
+BOX SIZING
+*********************/
+
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing:    $type;
+	-ms-box-sizing:     $type;
+	box-sizing:         $type;
+}
