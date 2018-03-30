@@ -5,18 +5,17 @@
   "dependencies": {
     "flatpickr": "^3.1.5",
     "flowtype": "^2.0.0",
-    "handlebars": "^4.0.10",
-    "js-cookie": "^2.1.4",
-    "select2": "^4.0.4"
+    "js-cookie": "^2.2.0",
+    "select2": "^4.0.5"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.6",
     "browser-sync-webpack-plugin": "^1.2.0",
     "css-loader": "^0.26.4",
-    "laravel-mix": "^1.5.0",
+    "laravel-mix": "^1.7.2",
     "style-loader": "^0.13.2",
-    "webpack": "^3.6.0",
-    "webpack-livereload-plugin": "^1.0.0"
+    "webpack": "^3.11.0",
+    "webpack-livereload-plugin": "^1.1.0"
   },
   "scripts": {
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
