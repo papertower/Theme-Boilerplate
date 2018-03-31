@@ -33,7 +33,7 @@ class Plugins implements Registerable {
   public function display_wp_controllers_notice() {
     if( !is_plugin_active( 'wp-controllers/wp-controllers.php' )) { ?>
       <div class="notice notice-error is-dismissible">
-        <h3><?php _e( 'WP Controllers Plugin is required. Please <a href="' . admin_url( 'plugins.php' ) . '"">go to plugin page </a>and activate now!' , 'bonestheme' ) ?></h3>
+        <h3><?php _e( 'WP Controllers Plugin is required. Please <a href="' . admin_url( 'plugins.php' ) . '"">go to plugin page </a>and activate now!' ) ?></h3>
       </div>
     <?php }
   }
