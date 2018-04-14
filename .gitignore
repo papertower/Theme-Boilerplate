@@ -8,6 +8,7 @@ _Store
 Thumbs.db
 .DS_Store
 .sass-cache/
+.idea/
 
 # NPM & Webpack
 node_modules/
