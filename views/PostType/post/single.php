@@ -6,7 +6,7 @@
 echo <<<HTML
 <div class="row">
 	<div class="small-12 columns">
-test
+    
 		<h1>{$Page->title()}</h1>
 		<h2>{$Page->date('F j, Y')}</h2>
 		{$Page->content()}
