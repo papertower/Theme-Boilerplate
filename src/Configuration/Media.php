@@ -29,8 +29,8 @@ class Media implements Registerable {
    * Place all image size additions here in a single, lovely place.
    */
   private function add_image_sizes() {
-    add_image_size( 'bones-thumb-600', 600, 150, true );
-    add_image_size( 'bones-thumb-300', 300, 100, true );
+    add_image_size( 'thumb-600', 600, 150, true );
+    add_image_size( 'thumb-300', 300, 100, true );
   }
 
   /**

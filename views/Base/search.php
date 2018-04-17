@@ -37,7 +37,9 @@ if ( $wp_query->found_posts ) {
   $results_text = "Sorry! There are no results for <em>$search</em>. Perhaps it's mispelled. Please try another search.";
 }
 
-$pagination = bones_page_navi();
+\Theme\Helper\ViewLoader::include('page_navigation');
+
+$pagination = get_the_page_navigation();
 
 echo <<<HTML
 <div class="lighttan search-results">

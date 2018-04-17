@@ -18,8 +18,8 @@ class Menu implements Registerable {
   public function register_navigation_menus() {
   	register_nav_menus(
   		array(
-  			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
-  			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
+  			'main-nav' => __( 'The Main Menu', 'theme' ),   // main nav in header
+  			'footer-links' => __( 'Footer Links', 'theme' ) // secondary nav in footer
   		)
   	);
   }
