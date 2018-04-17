@@ -12,10 +12,10 @@
     "browser-sync": "^2.23.6",
     "browser-sync-webpack-plugin": "^1.2.0",
     "css-loader": "^0.26.4",
-    "laravel-mix": "^1.7.2",
+    "laravel-mix": "^2.1.0",
     "style-loader": "^0.13.2",
     "webpack": "^3.11.0",
-    "webpack-livereload-plugin": "^1.1.0"
+    "webpack-livereload-plugin": "^1.2.0"
   },
   "scripts": {
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
