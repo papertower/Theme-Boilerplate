@@ -13,18 +13,20 @@ const mix = require('laravel-mix');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 // Setup asset compilation
-mix.js('assets/js/front-scripts.js', 'assets/dist/')
-  .js('assets/js/admin-scripts.js', 'assets/dist/');
+mix
+  .js('assets/js/front-scripts.js', 'assets/dist/')
+  .js('assets/js/admin-scripts.js', 'assets/dist/')
 
-mix.sass('assets/scss/style.scss', 'assets/dist/')
+  .sass('assets/scss/style.scss', 'assets/dist/')
   .sass('assets/scss/admin.scss', 'assets/dist/')
+
   .options({
     processCssUrls: false
   });
 
 // Refresh the browser at the following domain when files change
 mix.browserSync({
-  proxy: 'http://wpe-starter.dev/',
+  proxy: 'http://theme-boilerplate.local/',
   files: [
     '**/*.php',
     'style.css',
