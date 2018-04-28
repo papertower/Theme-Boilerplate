@@ -1,39 +1,68 @@
-@import "partials/variables";
-@import "partials/typography";
-@import "partials/functions";
-@import "partials/mixins";
-@import "partials/foundation";
-@import "partials/fontawesome";
-@import "partials/extras";
-@import "partials/normalize";
-@import "modules/alerts";
-@import "modules/buttons";
-@import "modules/forms";
+/**
+ * Main stylesheet for public-facing styles.
+ *
+ * Plugin styles follow http://cssguidelin.es/ and are organized according to
+ * Inverted Triangle CSS (ITCSS) principles put forth by Harry Roberts. In
+ * short, each layer of CSS gets more specific as you move down this file.
+ */
 
-@import "breakpoints/base";
+/*--------------------------------------------------------------
+# Settings - Global variables, config switches.
+--------------------------------------------------------------*/
+@import "settings/colors"; // Color variables.
+@import "settings/typography"; // Typography variables.
 
-@media only screen and (min-width: 481px) {
-	@import "breakpoints/481up";
-}
 
-@media only screen and (min-width: 768px) {
-	@import "breakpoints/768up";
-}
+/*--------------------------------------------------------------
+# Tools - Default mixins and functions.
+--------------------------------------------------------------*/
+@import "tools/browser-support";
+@import "tools/fonts";
 
-@media only screen and (min-width: 1030px) {
-	@import "breakpoints/1030up";
-}
 
-@media only screen and (min-width: 1240px) {
-	@import "breakpoints/1240up";
-}
+/*--------------------------------------------------------------
+# Generic - Ground-zero styles (resets, box-sizing, etc.).
+--------------------------------------------------------------*/
+@import "generic/print";
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min--moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
-	@import "breakpoints/2x";
-}
 
-@media print {
-	@import "partials/print";
-}
+/*--------------------------------------------------------------
+# Vendors - Third-party styles or extensions thereof.
+--------------------------------------------------------------*/
+// Provides clean, easy-to-read breakpoint mixins
+// https://include-media.com/#features
+@import "../../node_modules/include-media/dist/include-media";
+
+// Standard reset library
+// http://necolas.github.io/normalize.css/
+@import "../../node_modules/normalize.css";
+
+
+
+/*--------------------------------------------------------------
+# Elements - Unclassed HTML elements (type selectors).
+--------------------------------------------------------------*/
+@import "elements/page";
+@import "elements/text";
+
+
+/*--------------------------------------------------------------
+# Objects - Cosmetic-free design patterns.
+--------------------------------------------------------------*/
+@import "objects/page-layout";
+
+
+/*--------------------------------------------------------------
+# Components - Designed components, chunks of UI.
+--------------------------------------------------------------*/
+@import "components/buttons";
+@import "components/iframes";
+@import "components/header";
+@import "components/main-footer";
+
+
+/*--------------------------------------------------------------
+# Utilities - Helpers and overrides.
+--------------------------------------------------------------*/
+@import "utilities/visibility";
+@import "utilities/webfont";

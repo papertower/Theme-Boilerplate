@@ -4,7 +4,7 @@
 
 <?php
 echo <<<HTML
-<div class="row">
+<div class="page-layout__section">
 	<div class="small-12 columns">
 
 		<h1>{$Page->title()}</h1>

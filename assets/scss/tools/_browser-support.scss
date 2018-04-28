@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  #BROWSER SUPPORT EXTENSIONS
+\*------------------------------------*/
+
+/**
+ * Generates properties with the following prefixes, including the pure name.
+ *
+ * Mixin name is the same as the property.
+ */
+$support_prefixes: ('', '-webkit-', '-moz-');
+
+@mixin transition($transition...) {
+  @each $prefix in $support_prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+@mixin animate($animation...) {
+  @each $prefix in $support_prefixes {
+    #{$prefix}animation: $animation;
+  }
+}
+
+@mixin border-radius($length...) {
+  @each $prefix in $support_prefixes {
+    #{$prefix}border-radius: $length;
+  }
+}
+
+/**
+ * Additional mixins for simplifying browser support
+ */
+@mixin display-flex() {
+  display: -ms-flexbox;
+  display: flex;
+}

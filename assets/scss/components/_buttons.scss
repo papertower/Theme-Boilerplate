@@ -1,4 +1,4 @@
-%btn {
+.button {
   display: inline-block;
   position: relative;
   font-family: $sans-serif;
@@ -11,22 +11,28 @@
   cursor: pointer;
   border: none;
   -webkit-font-smoothing: inherit;
+  background-color: $blue;
+
   &:hover, &:focus {
+    background-color: darken($blue, 4%);
     color: $white;
     text-decoration: none;
   }
-  &:active {
-    top: 1px;
-  }
-}
 
-.button {
-  @extend %btn;
-  background-color: $blue;
-  &:hover, &:focus {
-    background-color: darken($blue, 4%);
-  }
   &:active {
     background-color: darken($blue, 5%);
+    top: 1px;
+  }
+
+  &--green {
+    background-color: $green;
+
+    &:hover, &:focus {
+      background-color: darken($green, 4%);
+    }
+
+    &:active {
+      background-color: darken($green, 5%);
+    }
   }
 }

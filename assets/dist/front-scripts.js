@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 3);
@@ -79,6 +79,10 @@ module.exports = __webpack_require__(6);
 /* 4 */
 /***/ (function(module, exports) {
 
+/**
+ * This code runs on every page on the front-end. If something should only run in a 1-2 places
+ * consider creating a new script and conditionally loading it from src/Assets/FrontEnd.php
+ */
 jQuery(document).ready(function ($) {});
 
 /***/ }),

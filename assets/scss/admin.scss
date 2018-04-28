@@ -1,15 +1,52 @@
-/******************************************************************
-Site Name:
-Author:
+/**
+ * Admin stylesheet for admin-facing styles.
+ *
+ * Plugin styles follow http://cssguidelin.es/ and are organized according to
+ * Inverted Triangle CSS (ITCSS) principles put forth by Harry Roberts. In
+ * short, each layer of CSS gets more specific as you move down this file.
+ */
 
-Stylesheet: Admin Stylesheet
+/*--------------------------------------------------------------
+# Settings - Global variables, config switches.
+--------------------------------------------------------------*/
 
-If you like living on the edge, you can add some styles here to
-customize the dashboard and WordPress admin area. This stylesheet
-is empty, but you can just start dropping your styles here to
-start customizing. All admin functions are located in lib/admin/
 
-******************************************************************/
+/*--------------------------------------------------------------
+# Tools - Default mixins and functions.
+--------------------------------------------------------------*/
 
-// Piklist styles
-@import "partials/piklist";
+
+/*--------------------------------------------------------------
+# Generic - Ground-zero styles (resets, box-sizing, etc.).
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Vendors - Third-party styles or extensions thereof.
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Elements - Unclassed HTML elements (type selectors).
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Objects - Cosmetic-free design patterns.
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Components - Designed components, chunks of UI.
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Themes - Styles that override many components.
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Utilities - Helpers and overrides.
+--------------------------------------------------------------*/
+

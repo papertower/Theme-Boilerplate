@@ -34,33 +34,27 @@
 
 	</head>
 
-	<body <?php body_class('animated fadeIn'); ?>>
+	<body <?php body_class('page-layout'); ?>>
 
-			<header class="ui">
+			<header class="main-header page-layout__section">
 
-				<div class="row">
-					<div class="small-12 columns">
+        <a class="main-header__logo" href="<?php echo home_url(); ?>/" rel="nofollow"><?php bloginfo('name'); ?></a>
 
-						<a id="logo" href="<?php echo home_url(); ?>/" rel="nofollow"><?php bloginfo('name'); ?></a>
+        <nav role="navigation">
+          <?php wp_nav_menu(array(
+            'container' => false,                           // remove nav container
+            'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+            'menu' => __( 'The Main Menu', 'theme' ),  // nav name
+            'menu_class' => 'nav top-nav cf',               // adding custom nav class
+            'theme_location' => 'main-nav',                 // where it's located in the theme
+            'before' => '',                                 // before the menu
+            'after' => '',                                  // after the menu
+            'link_before' => '',                            // before each link
+            'link_after' => '',                             // after each link
+            'depth' => 0,                                   // limit the depth of the nav
+            'fallback_cb' => ''                             // fallback function (if there is one)
+          )); ?>
 
-						<nav role="navigation">
-							<?php wp_nav_menu(array(
-								'container' => false,                           // remove nav container
-								'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-								'menu' => __( 'The Main Menu', 'theme' ),  // nav name
-								'menu_class' => 'nav top-nav cf',               // adding custom nav class
-								'theme_location' => 'main-nav',                 // where it's located in the theme
-								'before' => '',                                 // before the menu
-								'after' => '',                                  // after the menu
-								'link_before' => '',                            // before each link
-								'link_after' => '',                             // after each link
-								'depth' => 0,                                   // limit the depth of the nav
-								'fallback_cb' => ''                             // fallback function (if there is one)
-							)); ?>
-
-						</nav>
-
-					</div>
-				</div>
+        </nav>
 
 			</header>

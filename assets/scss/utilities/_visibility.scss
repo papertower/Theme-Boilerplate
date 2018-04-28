@@ -1,10 +1,15 @@
-// Classes
+/*------------------------------------*\
+  #GENERIC VISIBILITY CLASSES
+\*------------------------------------*/
+
 .show {
   display: block !important;
 }
+
 .hidden {
   display: none !important;
 }
+
 .invisible {
   visibility: hidden;
 }

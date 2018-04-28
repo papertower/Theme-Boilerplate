@@ -1,0 +1,21 @@
+html {
+  font-size: $base-font-size;
+  line-height: $base-line-spacing;
+  overflow-y: scroll;
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: $sans-serif;
+  background: $white;
+  margin: 0;
+  padding: 0;
+  cursor: auto;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+}

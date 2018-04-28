@@ -1,0 +1,10 @@
+.main-header {
+  background-color: $black;
+
+  &__logo {
+    margin: 0.75em 0;
+    color: $white;
+    text-decoration: none;
+    font-size: 2em;
+  }
+}

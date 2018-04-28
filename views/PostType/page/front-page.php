@@ -8,8 +8,7 @@
 
 <?php $Page = get_post_controller(); ?>
 
-<div class="row">
-	<div class="large-12 columns">
+<div class="page-layout__section">
 
     <div class="mn entry">
   		<h1>Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</h1>
@@ -82,7 +81,6 @@
       <?php echo $Page->content(); ?>
     </div>
 
-	</div>
 </div>
 
 <?php get_footer(); ?>
