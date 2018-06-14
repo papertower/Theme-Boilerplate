@@ -29,7 +29,10 @@ trait TemplateLoader {
    * @return array                    Templates with the included view templates
    */
   public function load_templates($post_templates, $wp_theme, $post, $post_type) {
-    $directories = [ STYLESHEETPATH . "/views/PostType/$post_type" ];
+    $directories = [
+        TEMPLATEPATH . "/views/PostType/$post_type",
+        STYLESHEETPATH . "/views/PostType/$post_type"
+    ];
 
     // Check the post directory, too, so the post archive file can be a page template.
     if ( 'page' === $post_type ) {
@@ -53,7 +56,9 @@ trait TemplateLoader {
           }
 
           if ( !empty($data['template_name']) && $post_type === $data['template_post_type'] ) {
-            $post_templates[str_replace(STYLESHEETPATH . '/', '', $file)] = $data['template_name'];
+            $path = str_replace(TEMPLATEPATH . '/', '', $file);
+            $path = str_replace(STYLESHEETPATH . '/', '', $path);
+            $post_templates[$path] = $data['template_name'];
           }
         }
       }
