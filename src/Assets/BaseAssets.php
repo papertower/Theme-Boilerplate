@@ -24,8 +24,8 @@ abstract class BaseAssets implements Registerable {
    * Set the assets URI and path when constructed
    */
   public function __construct() {
-    $this->assets_uri = get_stylesheet_directory_uri() . '/assets/dist';
-    $this->assets_path = get_stylesheet_directory() . '/assets/dist';
+    $this->assets_uri = get_template_directory_uri() . '/assets/dist';
+    $this->assets_path = get_template_directory() . '/assets/dist';
   }
 
   /**
