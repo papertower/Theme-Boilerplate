@@ -2,51 +2,51 @@
   # HEADINGS
 \*------------------------------------*/
 h1, h2, h3, h4, h5 {
-  text-rendering: optimizelegibility;
-  font-weight: 600;
-  line-height: 1.2;
-  color: $black;
+    text-rendering: optimizelegibility;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $black;
 }
 
 h1 {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 h2 {
-  font-size: 2.3em;
+    font-size: 2.3em;
 }
 
 h3 {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 h4 {
-  font-size: 1.8em;
+    font-size: 1.8em;
 }
 
 h5 {
-  font-size: 1.6em;
+    font-size: 1.6em;
 }
 
 /*------------------------------------*\
   # LINKS
 \*------------------------------------*/
 a {
-  color: $link-color;
-  outline: none !important;
+    color: $link-color;
+    outline: none !important;
 
-  &:hover {
-    color: $link-hover;
-  }
+    &:hover {
+        color: $link-hover;
+    }
 }
 
 /*------------------------------------*\
   # MARKERS
 \*------------------------------------*/
 hr {
-  height: 1px;
-  background: $border-color;
-  border: none;
-  margin: 2em 0;
-  display: block;
+    height: 1px;
+    background: $border-color;
+    border: none;
+    margin: 2em 0;
+    display: block;
 }

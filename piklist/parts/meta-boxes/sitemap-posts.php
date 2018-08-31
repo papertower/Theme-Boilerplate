@@ -11,139 +11,140 @@
  */
 
 // Description
-piklist('field', array(
-  'type'    => 'html',
-  'label'   => 'Notice',
-  'value'   => '<ul>
+piklist('field', [
+    'type'  => 'html',
+    'label' => 'Notice',
+    'value' => '<ul>
     <li>Only published posts will be displayed unless private option is checked.</li>
   </ul>'
-));
+]);
 
 // Posts Radio
-piklist('field', array(
-  'type'    => 'radio',
-  'field'   => 'posts_type',
-  'label'   => 'Posts',
-  'list'    => false,
-  'value'   => 'all',
-  'choices' => array(
-    'none'    => __('Do Not Display'),
-    'all'     => __('Show All Posts'),
-    'latest'  => __('Show Latest [field=posts-latest] Posts'),
-    'range'   => __('Show After [field=posts-range][field=posts-range-unit]'),
-    'select'  => __('Select Posts')
-  ),
-  'fields'  => array(
-    array(
-      'type'      => 'number',
-      'field'     => 'posts-latest',
-      'value'     => 5,
-      'embed'     => true,
-      'attributes'=> array(
-        'class'     => 'small-text',
-        'min'       => 1
-      )
-    ),
-    array(
-      'type'      => 'number',
-      'field'     => 'posts-range',
-      'value'     => 14,
-      'embed'     => true,
-      'attributes'=> array(
-        'class'     => 'small-text',
-        'min'       => 1
-      )
-    ),
-    array(
-      'type'      => 'select',
-      'field'     => 'posts-range-unit',
-      'value'     => 'day',
-      'embed'     => true,
-      'choices'   => array(
-        'day'       => 'Day(s)',
-        'month'     => 'Month(s)',
-        'year'      => 'Year(s)'
-      )
-    )
-  )
-));
+piklist('field', [
+    'type'    => 'radio',
+    'field'   => 'posts_type',
+    'label'   => 'Posts',
+    'list'    => false,
+    'value'   => 'all',
+    'choices' => [
+        'none'   => __('Do Not Display'),
+        'all'    => __('Show All Posts'),
+        'latest' => __('Show Latest [field=posts-latest] Posts'),
+        'range'  => __('Show After [field=posts-range][field=posts-range-unit]'),
+        'select' => __('Select Posts')
+    ],
+    'fields'  => [
+        [
+            'type'       => 'number',
+            'field'      => 'posts-latest',
+            'value'      => 5,
+            'embed'      => true,
+            'attributes' => [
+                'class' => 'small-text',
+                'min'   => 1
+            ]
+        ],
+        [
+            'type'       => 'number',
+            'field'      => 'posts-range',
+            'value'      => 14,
+            'embed'      => true,
+            'attributes' => [
+                'class' => 'small-text',
+                'min'   => 1
+            ]
+        ],
+        [
+            'type'    => 'select',
+            'field'   => 'posts-range-unit',
+            'value'   => 'day',
+            'embed'   => true,
+            'choices' => [
+                'day'   => 'Day(s)',
+                'month' => 'Month(s)',
+                'year'  => 'Year(s)'
+            ]
+        ]
+    ]
+]);
 
 // Before/After HTML
-piklist('field', array(
-  'type'    => 'group',
-  'field'   => 'posts-wrap-html',
-  'label'   => 'Wrap Section in HTML',
-  'conditions'=> array(
-    array(
-      'field'   => 'posts',
-      'compare' => '!=',
-      'value'   => 'none'
-    )
-  ),
-  'fields'  => array(
-    array(
-      'type'      => 'text',
-      'field'     => 'posts-wrap-before',
-      'columns'   => 4,
-      'attributes'=> array(
-        'placeholder' => 'Before'
-      )
-    ),
-    array(
-      'type'      => 'text',
-      'field'     => 'posts-wrap-after',
-      'columns'   => 4,
-      'attributes'=> array(
-        'placeholder' => 'After'
-      )
-    )
-  )
-));
+piklist('field', [
+    'type'       => 'group',
+    'field'      => 'posts-wrap-html',
+    'label'      => 'Wrap Section in HTML',
+    'conditions' => [
+        [
+            'field'   => 'posts',
+            'compare' => '!=',
+            'value'   => 'none'
+        ]
+    ],
+    'fields'     => [
+        [
+            'type'       => 'text',
+            'field'      => 'posts-wrap-before',
+            'columns'    => 4,
+            'attributes' => [
+                'placeholder' => 'Before'
+            ]
+        ],
+        [
+            'type'       => 'text',
+            'field'      => 'posts-wrap-after',
+            'columns'    => 4,
+            'attributes' => [
+                'placeholder' => 'After'
+            ]
+        ]
+    ]
+]);
 
 // Post Options
-piklist('field', array(
-  'type'      => 'checkbox',
-  'field'     => 'posts_options',
-  'label'     => 'Post Options',
-  'value'     => 'show-private',
-  'choices'   => array(
-    'show-private'  => __('Show private posts if logged in')
-  ),
-  'conditions'=> array(
-    array(
-      'field'   => 'posts_type',
-      'compare' => '!=',
-      'value'   => 'none'
-    )
-  )
-));
+piklist('field', [
+    'type'       => 'checkbox',
+    'field'      => 'posts_options',
+    'label'      => 'Post Options',
+    'value'      => 'show-private',
+    'choices'    => [
+        'show-private' => __('Show private posts if logged in')
+    ],
+    'conditions' => [
+        [
+            'field'   => 'posts_type',
+            'compare' => '!=',
+            'value'   => 'none'
+        ]
+    ]
+]);
 
 // Post Selections
-$posts = get_posts(array(
-  'post_type'   => 'post',
-  'numberposts' => -1,
-  'post_status' => array('publish', 'private'),
-));
+$posts = get_posts([
+    'post_type'   => 'post',
+    'numberposts' => -1,
+    'post_status' => ['publish', 'private'],
+]);
 
-$post_choices = array();
-foreach($posts as $post)
-  $post_choices[$post->ID] = $post->post_title;
+$post_choices = [];
+foreach ($posts as $post) {
+    $post_choices[$post->ID] = $post->post_title;
+}
 
 asort($post_choices);
 
-piklist('field', array(
-  'type'      => 'select',
-  'field'     => 'selected_posts',
-  'label'     => 'Include:',
-  'choices'   => $post_choices,
-  'attributes'=> array(
-    'class'     => 'select2',
-    'multiple'  => 'multiple'
-  ),
-  'conditions'=> array(
-    array(
-      'field'   => 'posts_type',
-      'value'   => 'select'
-    )
-  )
-));
+piklist('field', [
+    'type'       => 'select',
+    'field'      => 'selected_posts',
+    'label'      => 'Include:',
+    'choices'    => $post_choices,
+    'attributes' => [
+        'class'    => 'select2',
+        'multiple' => 'multiple'
+    ],
+    'conditions' => [
+        [
+            'field' => 'posts_type',
+            'value' => 'select'
+        ]
+    ]
+]);

@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-			<div class="row">
-				<div class="large-12 columns">
+<div class="row">
+  <div class="large-12 columns">
 
-          Archive Template
+    Archive Template
 
-				</div>
-			</div>
+  </div>
+</div>
 
 <?php get_footer(); ?>

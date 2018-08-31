@@ -1,25 +1,21 @@
 // This is legacy. It's not included and is only kept for reference. This will shortly be removed.
 
-
-
-
-
 /*********************
 HEADER STYLES
 *********************/
 
 header.ui {
-  background-color: $black;
-  .row {
-    padding: 1em 0;
-  }
+    background-color: $black;
+    .row {
+        padding: 1em 0;
+    }
 }
 
 #logo {
-  margin: 0.75em 0;
-  color: $white;
-  text-decoration: none;
-  font-size: 2em;
+    margin: 0.75em 0;
+    color: $white;
+    text-decoration: none;
+    font-size: 2em;
 }
 
 /*********************
@@ -30,148 +26,148 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 div.mn, div.entry {
-  margin-bottom: 4em;
+    margin-bottom: 4em;
 
-  h1, h2, h3, h4, h5 {
-    margin: 1.88em 0 .62em 0;
-  }
-  p, ul, ol {
-    margin: 0 0 .94em 0;
-  }
-  blockquote {
-    margin: 2.5em auto 2.5em auto;
-    max-width: 900px;
-    color: $black;
-    p {
-      font-size: 1.88em;
+    h1, h2, h3, h4, h5 {
+        margin: 1.88em 0 .62em 0;
     }
-  }
-
-  p, li {
-    font-size: 1.1em;
-  }
-
-  ul, ol {
-    margin-left: 1.25em;
-    li {
-      line-height: 1.5;
-      margin: .62em 0;
+    p, ul, ol {
+        margin: 0 0 .94em 0;
     }
-  }
-
-  ul li {
-    list-style: disc;
-  }
-  ol li {
-    list-style: decimal;
-  }
-
-  /* WordPress Gallery
------------------------------------------- */
-
-  .gallery {
-    margin-left: -0.5em;
-    margin-right: -0.5em;
-  }
-
-  .gallery:after {
-    display: table;
-    content: "";
-    clear: both;
-  }
-
-  .gallery-item {
-    margin: 0;
-    float: left;
-    width: 100%;
-    padding: .25em;
-  }
-
-  .gallery-item img {
-    width: 100%;
-  }
-
-  @include small-up {
-    .gallery-columns-1 .gallery-item {
-      width: 100%;
-      float: none;
+    blockquote {
+        margin: 2.5em auto 2.5em auto;
+        max-width: 900px;
+        color: $black;
+        p {
+            font-size: 1.88em;
+        }
     }
-    .gallery-columns-2 .gallery-item {
-      width: 50%
-    }
-    .gallery-columns-3 .gallery-item {
-      width: 33.3333%
-    }
-    .gallery-columns-4 .gallery-item {
-      width: 25%
-    }
-    .gallery-columns-5 .gallery-item {
-      width: 20%
-    }
-    .gallery-columns-6 .gallery-item {
-      width: 16.6667%
-    }
-    .gallery-columns-7 .gallery-item {
-      width: 14.2857%
-    }
-    .gallery-columns-8 .gallery-item {
-      width: 12.5%
-    }
-    .gallery-columns-9 .gallery-item {
-      width: 11.1111%
-    }
-  }
 
-  .gallery-columns-2 .gallery-item:nth-child(2n+1),
-  .gallery-columns-3 .gallery-item:nth-child(3n+1),
-  .gallery-columns-4 .gallery-item:nth-child(4n+1),
-  .gallery-columns-5 .gallery-item:nth-child(5n+1),
-  .gallery-columns-6 .gallery-item:nth-child(6n+1),
-  .gallery-columns-7 .gallery-item:nth-child(7n+1),
-  .gallery-columns-8 .gallery-item:nth-child(8n+1),
-  .gallery-columns-9 .gallery-item:nth-child(9n+1) {
-    clear: left;
-  }
+    p, li {
+        font-size: 1.1em;
+    }
 
-  .wp-caption-text {
-    font-size: .85em;
-    margin: .62em 0;
-    line-height: 1.3;
-  }
+    ul, ol {
+        margin-left: 1.25em;
+        li {
+            line-height: 1.5;
+            margin: .62em 0;
+        }
+    }
+
+    ul li {
+        list-style: disc;
+    }
+    ol li {
+        list-style: decimal;
+    }
+
+    /* WordPress Gallery
+  ------------------------------------------ */
+
+    .gallery {
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+    }
+
+    .gallery:after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+
+    .gallery-item {
+        margin: 0;
+        float: left;
+        width: 100%;
+        padding: .25em;
+    }
+
+    .gallery-item img {
+        width: 100%;
+    }
+
+    @include small-up {
+        .gallery-columns-1 .gallery-item {
+            width: 100%;
+            float: none;
+        }
+        .gallery-columns-2 .gallery-item {
+            width: 50%
+        }
+        .gallery-columns-3 .gallery-item {
+            width: 33.3333%
+        }
+        .gallery-columns-4 .gallery-item {
+            width: 25%
+        }
+        .gallery-columns-5 .gallery-item {
+            width: 20%
+        }
+        .gallery-columns-6 .gallery-item {
+            width: 16.6667%
+        }
+        .gallery-columns-7 .gallery-item {
+            width: 14.2857%
+        }
+        .gallery-columns-8 .gallery-item {
+            width: 12.5%
+        }
+        .gallery-columns-9 .gallery-item {
+            width: 11.1111%
+        }
+    }
+
+    .gallery-columns-2 .gallery-item:nth-child(2n+1),
+    .gallery-columns-3 .gallery-item:nth-child(3n+1),
+    .gallery-columns-4 .gallery-item:nth-child(4n+1),
+    .gallery-columns-5 .gallery-item:nth-child(5n+1),
+    .gallery-columns-6 .gallery-item:nth-child(6n+1),
+    .gallery-columns-7 .gallery-item:nth-child(7n+1),
+    .gallery-columns-8 .gallery-item:nth-child(8n+1),
+    .gallery-columns-9 .gallery-item:nth-child(9n+1) {
+        clear: left;
+    }
+
+    .wp-caption-text {
+        font-size: .85em;
+        margin: .62em 0;
+        line-height: 1.3;
+    }
 
 }
 
 .aligncenter, .alignnone {
-  display: block;
-  margin: 2.5em auto 2.5em auto;
+    display: block;
+    margin: 2.5em auto 2.5em auto;
 }
 
 .alignleft {
-  float: left;
-  margin: .31em 1.88em 1.88em 0;
+    float: left;
+    margin: .31em 1.88em 1.88em 0;
 }
 
 .alignright {
-  float: right;
-  margin: .31em 0 1.88em 1.88em;
+    float: right;
+    margin: .31em 0 1.88em 1.88em;
 }
 
 div.wp-caption {
-  max-width: 100%;
-  height: auto;
-  img {
-    display: block;
-  }
-  p {
-    font-size: .9em;
-    margin: .62em 0;
-  }
+    max-width: 100%;
+    height: auto;
+    img {
+        display: block;
+    }
+    p {
+        font-size: .9em;
+        margin: .62em 0;
+    }
 }
 
 footer.ui {
-  background: $black;
-  color: $white;
-  .row {
-    padding: 1em 0;
-  }
+    background: $black;
+    color: $white;
+    .row {
+        padding: 1em 0;
+    }
 }

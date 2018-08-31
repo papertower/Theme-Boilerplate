@@ -4,23 +4,23 @@
  *
  * This code provides support for select2 and flatpickr fields
  */
-jQuery(document).ready(function($) {
-  require("flatpickr");
-  require("flatpickr-css");
+jQuery(document).ready(function ($) {
+    require("flatpickr");
+    require("flatpickr-css");
 
-  require("select2");
-  require("select2-css");
+    require("select2");
+    require("select2-css");
 
-  $('.flatpickr').flatpickr();
+    $('.flatpickr').flatpickr();
 
-  $('select.select2').filter(function() {
-    return !$(this).data('select2');
-  }).select2();
-
-  $('.piklist-field').on('click', '.piklist-field-addmore-wrapper .piklist-addmore-add', function(event) {
-    var $element;
-    $(event.target).closest('.piklist-field').find('select.select2').filter(function() {
-      return !$(this).data('select2');
+    $('select.select2').filter(function () {
+        return !$(this).data('select2');
     }).select2();
-  });
+
+    $('.piklist-field').on('click', '.piklist-field-addmore-wrapper .piklist-addmore-add', function (event) {
+        var $element;
+        $(event.target).closest('.piklist-field').find('select.select2').filter(function () {
+            return !$(this).data('select2');
+        }).select2();
+    });
 });

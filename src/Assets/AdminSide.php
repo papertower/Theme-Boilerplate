@@ -9,13 +9,15 @@ namespace Theme\Assets;
  * BaseAssets provide shorthand methods for enqueue_script and enqueue_style. It assumes the asset
  * location to be in the dist directory and also adds automatic versioning.
  */
-class AdminSide extends BaseAssets  {
-  const FRONT_SCRIPTS = false;
+class AdminSide extends BaseAssets
+{
+    const FRONT_SCRIPTS = false;
 
-  /**
-   * Runs at the time when enqueueing should happen for the admin-side
-   */
-  public function enqueue() {
-    $this->enqueue_script('theme-scripts', 'admin-scripts.js', ['jquery', 'piklist']);
-  }
+    /**
+     * Runs at the time when enqueueing should happen for the admin-side
+     */
+    public function enqueue()
+    {
+        $this->enqueue_script('theme-scripts', 'admin-scripts.js', ['jquery', 'piklist']);
+    }
 }

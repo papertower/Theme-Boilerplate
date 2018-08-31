@@ -5,53 +5,40 @@
  * Inverted Triangle CSS (ITCSS) principles put forth by Harry Roberts. In
  * short, each layer of CSS gets more specific as you move down this file.
  */
-
 /*--------------------------------------------------------------
 # Settings - Global variables, config switches.
 --------------------------------------------------------------*/
-@import "settings/colors"; // Color variables.
-@import "settings/typography"; // Typography variables.
-
-
+@import "settings/colors";
+// Color variables.
+@import "settings/typography";
+// Typography variables.
 /*--------------------------------------------------------------
 # Tools - Default mixins and functions.
 --------------------------------------------------------------*/
 @import "tools/browser-support";
 @import "tools/fonts";
-
-
 /*--------------------------------------------------------------
 # Generic - Ground-zero styles (resets, box-sizing, etc.).
 --------------------------------------------------------------*/
 @import "generic/print";
-
-
 /*--------------------------------------------------------------
 # Vendors - Third-party styles or extensions thereof.
 --------------------------------------------------------------*/
 // Provides clean, easy-to-read breakpoint mixins
 // https://include-media.com/#features
 @import "../../node_modules/include-media/dist/include-media";
-
 // Standard reset library
 // http://necolas.github.io/normalize.css/
 @import "../../node_modules/normalize.css";
-
-
-
 /*--------------------------------------------------------------
 # Elements - Unclassed HTML elements (type selectors).
 --------------------------------------------------------------*/
 @import "elements/page";
 @import "elements/text";
-
-
 /*--------------------------------------------------------------
 # Objects - Cosmetic-free design patterns.
 --------------------------------------------------------------*/
 @import "objects/page-layout";
-
-
 /*--------------------------------------------------------------
 # Components - Designed components, chunks of UI.
 --------------------------------------------------------------*/
@@ -59,8 +46,6 @@
 @import "components/iframes";
 @import "components/header";
 @import "components/main-footer";
-
-
 /*--------------------------------------------------------------
 # Utilities - Helpers and overrides.
 --------------------------------------------------------------*/

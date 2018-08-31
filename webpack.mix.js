@@ -14,45 +14,45 @@ var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 // Setup asset compilation
 mix
-  .js('assets/js/front-scripts.js', 'assets/dist/')
-  .js('assets/js/admin-scripts.js', 'assets/dist/')
+    .js('assets/js/front-scripts.js', 'assets/dist/')
+    .js('assets/js/admin-scripts.js', 'assets/dist/')
 
-  .sass('assets/scss/style.scss', 'assets/dist/')
-  .sass('assets/scss/admin.scss', 'assets/dist/')
+    .sass('assets/scss/style.scss', 'assets/dist/')
+    .sass('assets/scss/admin.scss', 'assets/dist/')
 
-  .options({
-    processCssUrls: false
-  });
+    .options({
+        processCssUrls: false
+    });
 
 // Refresh the browser at the following domain when files change
 mix.browserSync({
-  proxy: 'http://theme-boilerplate.local/',
-  files: [
-    '**/*.php',
-    'style.css',
-    'dist/app.js',
-  ],
-  open: false,
-  notify: false,
+    proxy:  'http://theme-boilerplate.local/',
+    files:  [
+        '**/*.php',
+        'style.css',
+        'dist/app.js',
+    ],
+    open:   false,
+    notify: false,
 });
 
 // Load jQuery into every script and resolve package aliases
 mix.autoload({
     jQuery: ['$', 'window.jQuery'],
-  })
-  .webpackConfig({
-    externals: {
-      jQuery: 'jQuery',
-      jquery: 'jQuery'
-    },
-    resolve: {
-      alias: {
-        'handlebars':       'handlebars/dist/handlebars.js',
-        'select2-css':      'select2/dist/css/select2.min.css',
-        'flatpickr-css':    'flatpickr/dist/flatpickr.min.css',
-      }
-    },
-    plugins: [
-      new LiveReloadPlugin()
-    ]
-  });
+})
+    .webpackConfig({
+        externals: {
+            jQuery: 'jQuery',
+            jquery: 'jQuery'
+        },
+        resolve:   {
+            alias: {
+                'handlebars':    'handlebars/dist/handlebars.js',
+                'select2-css':   'select2/dist/css/select2.min.css',
+                'flatpickr-css': 'flatpickr/dist/flatpickr.min.css',
+            }
+        },
+        plugins:   [
+            new LiveReloadPlugin()
+        ]
+    });
